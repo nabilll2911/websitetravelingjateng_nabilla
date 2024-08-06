@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Celosia, destinasi wisata taman bunga yang terkenal di Bandungan, Jawa Tengah. Temukan informasi mengenai lokasi, sejarah, dan aktivitas yang bisa dilakukan di sini.">
+    <title>Celosia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Traveling Jateng</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="gallery-menu">
+                        <a href="#">Galeri Wisata</a>
+                        <ul class="dropdown-content">
+                            <li><a href="marina.html">Pantai Marina</a></li>
+                            <li><a href="celosia.html">Celosia</a></li>
+                            <li><a href="umbul.html">Umbul Sidomukti</a></li>
+                            <li><a href="saloka.html">Saloka</a></li>
+                            <li><a href="borobudur.html">Candi Borobudur</a></li>
+                            <li><a href="kotalama.html">Wisata Kota Lama</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="img/taman celo.jpg" alt="Celosia Taman Bunga">
+        <div class="banner-content">
+            <h1>Celosia</h1>
+        </div>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="content container">
+        <h2>Sejarah Celosia</h2>
+        <p>Celosia adalah taman bunga yang terletak di Bandungan, Jawa Tengah. Tempat ini dikenal dengan berbagai jenis bunga yang ditanam secara artistik, menciptakan pemandangan yang memukau bagi pengunjung. Celosia menawarkan suasana yang damai dan indah, ideal untuk berfoto dan menikmati keindahan alam.</p>
+        <img src="img/taman celo3.jpg" alt="Celosia Taman Bunga" class="zoomable">
+
+        <h2>Daya Tarik Utama</h2>
+        <p>Taman Celosia menawarkan berbagai jenis bunga dengan warna-warni yang cerah dan desain taman yang unik. Pengunjung dapat menikmati pemandangan bunga yang indah serta area foto yang Instagramable. Tempat ini juga menyediakan fasilitas untuk bersantai dan menikmati teh atau kopi sambil menikmati pemandangan.</p>
+        <img src="img/celo10.jpeg" alt="Bunga di Celosia" class="zoomable">
+
+        <h2>Aktivitas Wisata</h2>
+        <p>Di Celosia, Anda bisa berkeliling menikmati keindahan taman bunga, berfoto dengan latar belakang bunga-bunga yang indah, serta menikmati berbagai fasilitas yang tersedia seperti kafe dan area istirahat. Taman ini juga sering mengadakan acara dan festival bunga yang menarik.</p>
+        <img src="img/images.jpeg" alt="Aktivitas di Celosia" class="zoomable">
+    </main>
+
+    <!-- Gallery Section -->
+    <section class="content container">
+        <h2>Galeri Celosia</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img/7.jpg" alt="Celosia 1" class="gallery-image zoomable">
+            </div>
+            <div class="gallery-item">
+                <img src="img/taman celo3.jpg" alt="Celosia 2" class="gallery-image zoomable">
+            </div>
+            <div class="gallery-item">
+                <img src="img/celotaman 2.jpg" alt="Celosia 3" class="gallery-image zoomable">
+            </div>
+        </div>
+    </section>
+
+    <!-- Tombol Kembali ke atas -->
+    <div class="back-to-top-container">
+        <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 nabilla Traveling Jateng. All rights traveling jateng.</p>
+            <ul class="social-media">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/nbllafdh_/"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>n
+
+    <!-- Script untuk kembali ke atas -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const backToTopButton = document.querySelector(".back-to-top");
+
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+
+            backToTopButton.addEventListener("click", scrollToTop);
+
+            const modal = document.createElement("div");
+            modal.classList.add("modal");
+            document.body.appendChild(modal);
+
+            const modalContent = document.createElement("img");
+            modalContent.classList.add("modal-content");
+            modal.appendChild(modalContent);
+
+            const closeModal = document.createElement("span");
+            closeModal.classList.add("close");
+            closeModal.innerHTML = "&times;";
+            modal.appendChild(closeModal);
+
+            closeModal.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            const images = document.querySelectorAll(".zoomable");
+            images.forEach(image => {
+                image.onclick = function() {
+                    modal.style.display = "block";
+                    modalContent.src = this.src;
+                };
+            });
+
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+    </script>
+</body>
+</html>

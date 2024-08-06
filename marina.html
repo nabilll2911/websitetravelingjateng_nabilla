@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pantai Marina, destinasi wisata pantai populer di Semarang, Jawa Tengah. Temukan informasi mengenai lokasi, sejarah, dan aktivitas yang bisa dilakukan di sini.">
+    <title>Pantai Marina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Traveling Jateng</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="gallery-menu">
+                        <a href="#">Galeri Wisata</a>
+                        <ul class="dropdown-content">
+                            <li><a href="marina.html">Pantai Marina</a></li>
+                            <li><a href="celosia.html">Celosia</a></li>
+                            <li><a href="umbul.html">Umbul Sidomukti</a></li>
+                            <li><a href="saloka.html">Saloka</a></li>
+                            <li><a href="borobudur.html">Candi Borobudur</a></li>
+                            <li><a href="kotalama.html">Wisata Kota Lama</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="img/61f61c6c05e59.jpg" alt="Pantai Marina">
+        <div class="banner-content">
+            <h1>Pantai Marina</h1>
+        </div>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="content container">
+        <h2>Sejarah Pantai Marina</h2>
+        <p>
+            Pantai Marina terletak di Semarang, Jawa Tengah, dan dikenal dengan keindahan pantainya yang tenang serta fasilitas wisata yang lengkap. Pantai ini merupakan salah satu destinasi favorit bagi warga lokal dan wisatawan. Dikenal dengan pasir putihnya yang bersih dan air laut yang jernih, Pantai Marina menawarkan suasana santai yang ideal untuk bersantai dan menikmati pemandangan laut.
+        </p>
+        <img src="img/fotomarina.jpg" alt="Pantai Marina" class="zoomable">
+        
+        <h2>Daya Tarik Utama</h2>
+        <p>
+            Beberapa daya tarik utama di Pantai Marina termasuk area bermain air yang aman, jalur jogging sepanjang pantai, serta fasilitas penyewaan jetski dan perahu. Pengunjung juga dapat menikmati pemandangan indah kapal-kapal yang berlabuh dan berbagai aktivitas seru lainnya.
+        </p>
+        <img src="img/WhatsApp-Image-2024-05-21-at-12.01.12-1024x575.jpeg" alt="Jetski di Pantai Marina" class="zoomable">
+
+        <h2>Aktivitas Wisata</h2>
+        <p>
+            Di Pantai Marina, Anda dapat menikmati berbagai aktivitas seperti berenang, berjemur di pantai, memancing, atau menyewa jetski. Terdapat juga area khusus untuk anak-anak bermain, serta beberapa kafe dan restoran yang menawarkan makanan dan minuman dengan pemandangan pantai.
+        </p>
+        <img src="img/images (4).jpeg" alt="Aktivitas di Pantai Marina" class="zoomable">
+    </main>
+
+    <!-- Gallery Section -->
+    <section class="content container">
+        <h2>Galeri Pantai Marina</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img/2022-03-14.jpg" alt="Pantai Marina 1" class="gallery-image zoomable">
+            </div>
+            <div class="gallery-item">
+                <img src="img/IMG20210418170810.jpg" alt="Pantai Marina 2" class="gallery-image zoomable">
+            </div>
+            <div class="gallery-item">
+                <img src="img/61f61c6c05e59.jpg" alt="Pantai Marina 3" class="gallery-image zoomable">
+            </div>
+        </div>
+    </section>
+
+    <!-- Tombol Kembali ke atas -->
+    <div class="back-to-top-container">
+        <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024nabilla Traveling Jateng. All rights reserved.</p>
+            <ul class="social-media">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/nbllafdh_/"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Script untuk kembali ke atas -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const backToTopButton = document.querySelector(".back-to-top");
+
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+
+            backToTopButton.addEventListener("click", scrollToTop);
+
+            const modal = document.createElement("div");
+            modal.classList.add("modal");
+            document.body.appendChild(modal);
+
+            const modalContent = document.createElement("img");
+            modalContent.classList.add("modal-content");
+            modal.appendChild(modalContent);
+
+            const closeModal = document.createElement("span");
+            closeModal.classList.add("close");
+            closeModal.innerHTML = "&times;";
+            modal.appendChild(closeModal);
+
+            closeModal.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            const images = document.querySelectorAll(".zoomable");
+            images.forEach(image => {
+                image.onclick = function() {
+                    modal.style.display = "block";
+                    modalContent.src = this.src;
+                };
+            });
+
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+    </script>
+</body>
+</html>

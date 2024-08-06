@@ -1,0 +1,1076 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya umum untuk seluruh halaman */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+
+}
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+header {
+  background-color: chocolate;
+  color: #e1610b;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; 
+}
+header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2em;
+}
+header .container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 a {
+  color: #fcf7f7;
+  text-decoration: none;
+}
+header ul li {
+  margin-left: 15px; /* Spacing between menu items */
+}
+
+header ul li a {
+  text-decoration: none;
+  color: rgb(247, 131, 131); 
+  padding: 10px; 
+  display: inline-block; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+header ul li a:hover {
+  background-color: #b45c0a; 
+  color: #fff; 
+}
+
+header nav ul li a:focus {
+  background-color:chocolate;
+  border-radius: 5px;
+}
+nav {
+  background-color:chocolate;
+}
+.active {
+  background-color: #b45c0a; 
+  color: white; 
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  header h1 a {
+    font-size: 1.2rem; 
+  }
+}
+menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* Menambahkan padding ke bagian atas konten utama */
+main {
+  margin-top: 60px; /* Menyesuaikan dengan tinggi header */
+}
+/* Gaya untuk perangkat dengan layar kecil */
+@media (max-width: 768px) {
+  header .menu-toggle {
+    display: block;
+  }
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+nav ul li ul.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 200px; /* Width of the dropdown menu */
+}
+
+nav ul li:hover ul.dropdown-menu {
+  display: block;
+}
+
+nav ul li ul.dropdown-menu li {
+  padding: 10px 20px; /* Padding around menu items */
+  cursor: pointer;
+}
+
+nav ul li ul.dropdown-menu li:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+}
+
+nav ul li ul.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%; /* Full width */
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+.nav-icon-link {
+  color: white;
+  background-color: #d87a31; /* This color can be changed as per your requirement */
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.gallery-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
+}
+
+.gallery-menu:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  min-width: 160px;
+}
+
+.dropdown-content li {
+  list-style: none;
+  padding: 8px 16px;
+}
+
+.dropdown-content li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+.gallery-menu:hover .dropdown-content {
+  display: block;
+}
+
+/* Specific styles for the icons and text */
+.nav-icon {
+  margin-right: 5px;
+}
+main {
+  padding: 20px 0;
+}
+
+main h1 {
+  font-size: 28px;
+}
+
+main p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  width: calc(50% - 10px);
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* Banner Content */
+.banner-content h1 {
+  font-size: 3rem;
+  color: #060505;
+  animation: flicker 2s infinite;
+}
+
+/* Keyframes for flicker animation */
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+/* Optional: to add a slight color variation during the flicker */
+@keyframes flicker-color {
+  0%, 100% {
+    opacity: 1;
+    color: #0c0c0c;
+  }
+  50% {
+    opacity: 0.1;
+    color: #ffeb3b;
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(249, 245, 245); /* Fallback color */
+}
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7; /* Adjust the opacity as needed */
+}
+.banner-content {
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(244, 241, 241, 0.5);
+  z-index: 1; /* Ensure the content is above the image */
+}
+.banner-content h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.banner-content p {
+  font-size: 1.5em;
+  margin: 0.5em 0 1em;
+}
+.banner-content a {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background-color: rgba(21, 1, 1, 0.7);
+  color: #333;
+  text-decoration: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+.banner-content a:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.contact-banner {
+  background-image: url('img/pngtree-abstract-minimal-orange-background-simple-background-with-halftone-image_519864.jpg'); /* Ganti URL dengan gambar yang sesuai */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 20px;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.content img {
+  width: 50%; /* Adjust the percentage as needed */
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  padding: 20px;
+}
+
+.gallery, .services, .contact {
+  margin-bottom: 40px;
+}
+/* Event Section */
+.event {
+  padding: 2rem 0;
+}
+
+.event-item {
+  margin-bottom: 2rem;
+}
+
+.event-item h3 {
+  margin: 0.5rem 0;
+}
+
+.event-item img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+
+/* Gaya untuk tombol kembali ke atas */
+.back-to-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.back-to-top {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  background: #555;
+}
+
+/* Gaya untuk kalimat pembuka */
+.opening {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.opening .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.opening p {
+  font-size: 16px; /* Ukuran font untuk paragraf */
+  line-height: 1.6; /* Jarak antar baris */
+  color: #333; /* Warna teks */
+  text-align: center;
+  margin: 0; 
+}
+/* Gaya untuk main section */
+main .container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(243, 240, 240, 0.1);
+}
+/* Styles for Galeri Wisata section */
+
+#galeri-wisata {
+  background-color: #f9f9f9; 
+  padding: 50px 0; 
+  text-align: center;
+}
+
+#galeri-wisata .container {
+  max-width: 960px; 
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#galeri-wisata .section-title {
+  margin-bottom: 40px; /* Spacing below section title */
+}
+
+#galeri-wisata .section-title h1 {
+  font-size: 2.5rem; /* Title font size */
+  color: #333; /* Title color */
+}
+
+#galeri-wisata .line {
+  width: 50px; 
+  height: 3px; 
+  background-color: #d17703; 
+  margin: 20px auto;
+}
+
+#galeri-wisata .galeri-wisata {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
+  justify-items: center; 
+}
+
+#galeri-wisata .galeri {
+  background-color: #fff; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#galeri-wisata .galeri img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  margin-bottom: 15px; 
+}
+
+#galeri-wisata .galeri h3 {
+  font-size: 1.5rem; 
+  color: #333; 
+}
+
+#galeri-wisata .galeri p {
+  font-size: 1rem;
+  color: #666; 
+}
+
+.galeri:hover {
+  transform: scale(1.05);
+}
+.slick-slide img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Mengatur gaya untuk gallery */
+.gallery {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+/* Gaya untuk tombol view */
+.view-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0056b3;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.view-button:hover {
+  background-color: #003d7a;
+  color: #e0e0e0;
+}
+
+/* Gaya untuk galeri */
+main {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.overlay-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay-info h4,
+.overlay-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* CSS untuk layout galeri */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.bg-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px; /* Mengatur flex item agar dapat menyesuaikan ukuran container */
+  display: flex;
+}
+
+.gambar {
+  flex: 1 1 50%; /* Ukuran gambar 50% dari lebar card */
+}
+
+.gambar img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.05);
+}
+
+.des-card {
+  flex: 1 1 50%; /* Ukuran deskripsi 50% dari lebar card */
+  padding: 20px;
+}
+
+.des-card h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.des-card p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .gambar,
+  .des-card {
+    flex: 1 1 100%; 
+  }
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-more:hover {
+  background-color: #555;
+}
+
+/* Gaya untuk judul utama */
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: wheat;
+}
+
+/* Gaya untuk deskripsi singkat */
+p {
+  margin-bottom: 10px;
+}
+
+/* Gaya khusus untuk galeri */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+}
+
+/* Gaya khusus untuk setiap item galeri */
+.gallery-item {
+  flex: 1 1 calc(33.333% - 10px); 
+  box-sizing: border-box;
+}
+
+/* Gaya untuk gambar di dalam galeri */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; 
+}
+
+/* Gaya dasar untuk halaman */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Gaya untuk galeri */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.333% - 15px);
+  position: relative;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Gaya untuk Slick Carousel */
+.slick-slide {
+  margin: 0 10px; /* Ruang antara gambar */
+}
+
+.slick-prev, .slick-next {
+  font-size: 24px;
+  color: black;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: 15% auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.services {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.service-card h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1em;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+      width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+      width: 100%;
+  }
+
+  .services h1 {
+      font-size: 1.5em;
+  }
+
+  .service-card h2 {
+      font-size: 1em;
+  }
+
+  .service-card p {
+      font-size: 0.9em;
+  }
+}
+/* Gaya khusus untuk peta */
+.map {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#map {
+  height: 400px; 
+  width: 100%; 
+  border: 2px solid #ddd; 
+  border-radius: 5px; 
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 300px; 
+  }
+}
+
+@media (max-width: 480px) {
+  #map {
+    height: 200px; 
+  }
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-card {
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+/* Tata letak dan styling panel */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Flexbox untuk grid kontak */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-card {
+  flex: 1 1 300px; /* Ukuran dasar 300px, tapi bisa tumbuh dan menyusut */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* Vertikal center */
+}
+
+.contact-card .contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  font-size: 1.5rem; /* Ukuran ikon */
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+/* Formulir kontak */
+.contact-form {
+  margin: 20px 0;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+  .left-panel, .right-panel {
+    width: 100%; /* Panel menjadi penuh lebar pada perangkat kecil */
+    margin-bottom: 20px; /* Menambahkan jarak antar panel */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    min-width: 100%; /* Contact card memenuhi lebar penuh pada perangkat sangat kecil */
+  }
+}
+
+/* Gaya untuk sosial media */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.social-media li {
+  list-style: none;
+}
+
+.social-media a {
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #ddd;
+}
+/* Styles for Home Section with Contact Information */
+.home-section {
+  background-color: #f9f9f9; 
+  background-image: url('img/grojogan 2.jpg');
+  padding: 40px 0; 
+  text-align: center; 
+  background-position: center;
+
+ 
+}
+
+.home-section .container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px;
+}
+
+.home-section h2 {
+  font-size: 28px; /* Font size for the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #dc8a2c; /* Text color */
+}
+
+.home-section p {
+  font-size: 18px; /* Font size for the paragraph */
+  margin-bottom: 30px; /* Space below the paragraph */
+  color: #f7f7f9; /* Text color */
+}
+
+.home-section .btn {
+  display: inline-block; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  color: #fff; 
+  background-color: #f37676; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  transition: background-color 0.3s; 
+  width: auto; 
+  padding: 10px 30px;
+}
+
+.home-section .btn:hover {
+  background-color: #121111; 
+}
+
+/* Gaya untuk footer */
+footer {
+  background:chocolate;
+  color: #160101;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .social-media {
+  list-style: none;
+  padding: 0;
+}
+
+footer .social-media li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer .social-media li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .social-media li a:hover {
+  color: #ddd;
+}

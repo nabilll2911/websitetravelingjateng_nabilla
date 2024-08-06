@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traveling Jawa Tengah</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Traveling Jateng</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="gallery-menu">
+            <a href="#">Galeri Wisata</a>
+            <ul class="dropdown-content">
+              <li><a href="marina.html">Pantai Marina</a></li>
+              <li><a href="celosia.html">Celosia</a></li>
+              <li><a href="umbul.html">Umbul Sidomukti</a></li>
+              <li><a href="saloka.html">Saloka</a></li>
+              <li><a href="borobudur.html">Candi Borobudur</a></li>
+              <li><a href="kotalama.html">Wisata Kota Lama</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Umbul Sidomukti</h1>
+    </div>
+    <img src="img/umbul3.jpg" alt="Menikmati pesona keindahan Jawa Tengah dalam genggaman">
+  </section>
+
+  <!-- Tombol Kembali ke atas -->
+  <div class="back-to-top-container">
+    <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+  </div>
+
+  <!-- Konten Utama -->
+  <main class="content container">
+    <section id="umbul-sidomukti">
+      <div class="content">
+        <h2>Sejarah Umbul Sidomukti</h2>
+        <p>Umbul Sidomukti adalah sebuah kawasan wisata yang terletak di Bandungan, Kabupaten Semarang, Jawa Tengah. Destinasi ini dikenal dengan keindahan alamnya yang memukau, termasuk kolam pemandian alami dan berbagai fasilitas outdoor yang menyenangkan.</p>
+        <img src="img/imagesumbul.jpeg" alt="Umbul Sidomukti" class="zoomable">
+
+        <h2>Daya Tarik Utama</h2>
+        <p>Kawasan ini menawarkan pemandangan alam yang luar biasa dengan udara sejuk dan bersih. Anda dapat menikmati berbagai aktivitas outdoor seperti berenang di kolam pemandian alami, bersepeda, dan hiking. Umbul Sidomukti juga dikenal dengan fasilitas jembatan gantung dan area piknik yang menarik.</p>
+        <img src="img/umbul1.jpg" alt="Daya Tarik Umbul Sidomukti" class="zoomable">
+
+        <h2>Aktivitas Wisata</h2>
+        <p>Di Umbul Sidomukti, Anda bisa berenang di kolam pemandian alami, menjelajahi jalur hiking, atau hanya bersantai menikmati pemandangan alam. Tersedia juga area untuk piknik dan berfoto, serta beberapa restoran dan kafe untuk bersantap.</p>
+        <img src="img/5b3d5509-a156-4f52-995f-0c1876fc53ef_xs.jpg" alt="Aktivitas di Umbul Sidomukti" class="zoomable">
+      </div>
+    </section>
+
+    <!-- Galeri gambar -->
+    <section class="content container">
+      <h2>Galeri umbul-sidomukti</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="img/imagesumbul.jpeg" alt="Umbul" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="img/umbul1.jpg" alt="Umbul lainnya" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="img/umbul.jpeg" alt="Umbul lainnya" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="img/umbul3.jpg" alt="Umbul lainnya" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="img/umbul kemah4.jpg" alt="Umbul lainnya" class="gallery-image">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal untuk menampilkan gambar yang diperbesar -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Nabilla Traveling Jateng. All rights reserved.</p>
+      <ul class="social-media">
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/nbllafdh_/"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+
+      backToTopButton.addEventListener("click", scrollToTop);
+
+      const modal = document.getElementById("myModal");
+      const modalContent = modal.querySelector(".modal-content");
+      const closeModal = modal.querySelector(".close");
+
+      closeModal.onclick = function() {
+        modal.style.display = "none";
+      };
+
+      const images = document.querySelectorAll(".zoomable");
+      images.forEach(image => {
+        image.onclick = function() {
+          modal.style.display = "block";
+          modalContent.src = this.src;
+        };
+      });
+
+      window.onclick = function(event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    });
+  </script>
+</body>
+</html>
